@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MATRIX</title>
+  <meta name="title" content="Adex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a business agency html template made by codewithsadee">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .hero,
+    .navbar {
+      position: relative;
+      overflow: hidden; /* Ensure the canvas does not overflow */
+    }
+  
+    .matrix-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  
+    .nav-open-btn {
+      position: absolute;
+      top: 20px; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 1000; /* Ensure it appears above the matrix effect */
+    }
+  
+    .header {
+      position: fixed; /* Change from 'relative' to 'fixed' */
+      top: 0; /* Position the header at the top of the viewport */
+      width: 100%; /* Make the header full-width */
+      background-color: transparent !important; /* Ensure the header has a transparent background */
+      z-index: 999; /* Ensure it appears above other content */
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; /* Adjust as needed */
+    }
+
+    .btn-wrapper button {
+      margin: 0 10px; /* Adjust as needed */
+      padding: 10px 20px; /* Adjust as needed */
+      background-color: transparent;
+      border: none;
+      cursor: pointer; /* Add cursor pointer */
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-wrapper button i {
+      margin-right: 5px;
+    }
+
+    .social-button {
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .social-button i {
+    margin-right: 5px;
+  }
+
+
+    @media(max-width: 768px) {
+      .btn-wrapper {
+        flex-direction: column;
+      }
+
+      .btn-wrapper button {
+        margin: 10px 0; /* Adjust as needed */
+      }
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- #HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+      <nav class="navbar" data-navbar>
+        <canvas class="matrix-background" style="background: #006400;"></canvas> <!-- Matrix effect canvas -->
+        <div class="navbar-top">
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li>
+            <a href="https://venom.network/" class="navbar-link">Venon Network</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- #HERO -->
+      <section class="section hero" aria-label="home">
+        <canvas class="matrix-background" style="background: #006400;"></canvas> <!-- Matrix effect canvas -->
+        <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="hero-slider" data-slider>
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container>
+                <li class="slider-item">
+                  <figure class="img-holder" style="--width: 25px; --height: 75px;">
+                    <img src="./assets/images/logo.png" width="25" height="75" alt="" class="img-cover">
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </div>
+  
+          <div class="hero-content" style="text-align: center;">
+            <h1 class="h3 hero-title">THE MATRIX</h1>
+            <p class="hero-text">
+              the Matrix as a metaphor for the world we live in. 
+              Andrew Tate believes that the world is controlled by a small group 
+              of people who are intent on keeping the rest of us down.
+               He argues that the media, the government, and big corporations 
+               are all part of this system, and that they use their power to 
+               manipulate us and keep us in line.
+              Tate believes that the only way to escape the Matrix is to become aware of it.
+               Once you know that the world is not what it seems, you can start to break free from its control. 
+               He encourages his followers to think for themselves, to question authority, and to never give up on their dreams.
+            </p>
+            <br>
+            <br>
+            
+            <h1 class="h3 hero-title">what is escaping the matrix?</h1>
+            <p class="hero-text">
+              Escaping the Matrix means shedding all outside influence.
+            </p>
+
+            <p class="hero-text">
+              Society wants you to behave a certain way, look a certain way, and think a certain way.
+              But is that what you want? Escaping the Matrix means you're shedding all of that outside 
+              influence to determine what you truly want deep in your soul.
+            </p>
+
+            <div class="btn-wrapper">
+              <button id="telegramBtn" class="social-button">
+                <i class="fab fa-telegram"></i> Telegram
+              </button>
+              <button id="twitterBtn" class="social-button">
+                <i class="fab fa-twitter"></i> Twitter
+              </button>
+            </div>
+            
+            
+            
+          </div>
+        </div>
+      </section>
+  
+      <!-- Add other sections and content here -->
+    </article>
+  </main>
+  
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const telegramBtn = document.getElementById("telegramBtn");
+  const twitterBtn = document.getElementById("twitterBtn");
+
+  // Click event handler for desktop
+  telegramBtn.addEventListener("click", function() {
+    window.location.href = "https://t.me/matrixvenom";
+  });
+
+  // Click event handler for desktop
+  twitterBtn.addEventListener("click", function() {
+    window.location.href = "https://x.com/matrixonvenom?s=21&t=RazWbuVfVbYV0SS0j8qp3g";
+  });
+
+  // Touch event handler for mobile
+  telegramBtn.addEventListener("touchstart", function() {
+    window.location.href = "https://t.me/matrixvenom";
+  });
+
+  // Touch event handler for mobile
+  twitterBtn.addEventListener("touchstart", function() {
+    window.location.href = "https://x.com/matrixonvenom?s=21&t=RazWbuVfVbYV0SS0j8qp3g";
+  });
+});
+
+
+
+
+    var canvases = document.querySelectorAll('.matrix-background'); // Select all elements with class matrix-background
+    canvases.forEach(function(canvas) {
+      var context = canvas.getContext('2d');
+      var W = window.innerWidth;
+      var H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
+      var fontSize = 16;
+      var columns = Math.floor(W / fontSize);
+      var drops = [];
+      for (var i = 0; i < columns; i++) {
+        drops.push(0);
+      }
+      var str = "JavaScript Hacking Effect";
+
+      function draw() {
+        context.fillStyle = "rgba(0,0,0,0.05)";
+        context.fillRect(0, 0, W, H);
+        context.font = "700 " + fontSize + "px Arial"; // Corrected the font assignment
+        context.fillStyle = "#00cc33";
+        for (var i = 0; i < columns; i++) {
+          var index = Math.floor(Math.random() * str.length);
+          var x = i * fontSize;
+          var y = drops[i] * fontSize;
+          context.fillText(str[index], x, y);
+          if (y >= canvas.height && Math.random() > 0.99) {
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }
+      draw();
+      setInterval(draw, 35);
+    });
+  </script>
+
+</body>
+
+</html>
