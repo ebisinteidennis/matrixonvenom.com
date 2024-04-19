@@ -177,7 +177,7 @@
                   <span contenteditable="true">
                     Swap from USDT that was bridged over and swap to $MATRIX using the contract address here: 
                     <code style="display: block;">0:10109f85912d3300b2506675b722bd00187cea46ce953b694d90f069e483c907</code>
-                    <button class="copy-button" onclick="copyText('Swap from USDT that was bridged over and swap to $MATRIX using the contract address here: 0:10109f85912d3300b2506675b722bd00187cea46ce953b694d90f069e483c907.')">Copy</button>
+                    <button class="copy-button" onclick="copyText('0:10109f85912d3300b2506675b722bd00187cea46ce953b694d90f069e483c907.')">Copy</button>
                   </span>
                 </li>
             </ol>
@@ -255,6 +255,9 @@
             padding: 5px 10px;
             cursor: pointer;
             margin-left: 10px;
+            position: absolute;
+            bottom: -25px;
+            right: 0;
           }
         
           .custom-alert {
@@ -286,6 +289,10 @@
             .hero-text li {
               padding: 5px 0;
             }
+        
+            code {
+              white-space: normal; /* Allow text to wrap onto multiple lines */
+            }
           }
         
           /* Added CSS for buttons inside contenteditable spans */
@@ -294,12 +301,8 @@
             display: inline-block;
           }
         
-          .copy-button {
-            position: absolute;
-            bottom: -25px;
-            right: 0;
-          }
         </style>
+        
         
         
         
