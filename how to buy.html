@@ -147,52 +147,41 @@
       <!-- #HERO -->
       <section class="section hero" aria-label="home">
         <canvas class="matrix-background" style="background: #006400;"></canvas> <!-- Matrix effect canvas -->
+        
         <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <div class="hero-slider" data-slider>
-            <div class="slider-inner">
-              <ul class="slider-container" data-slider-container>
-                <li class="slider-item">
-                  <figure class="img-holder" style="--width: 25px; --height: 75px;">
-                    <img src="./assets/images/logo.png" width="25" height="75" alt="" class="img-cover">
-                  </figure>
+          <div class="hero-content" style="text-align: center; max-width: 600px; padding: 0 20px;">
+            <h1 class="h3 hero-title">Steps to Bridge:</h1>
+            <ol class="hero-text" style="list-style: decimal; padding-left: 0; text-align: center;">
+                <li>
+                  <span contenteditable="true">
+                    Buy USDT on Ethereum on MetaMask.
+                  </span>
                 </li>
-              </ul>
-            </div>
-            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
-              <ion-icon name="arrow-back"></ion-icon>
-            </button>
-            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
-              <ion-icon name="arrow-forward"></ion-icon>
-            </button>
-          </div>
-  
-          <div class="hero-content" style="text-align: center;">
-            <h1 class="h3 hero-title">THE MATRIX</h1>
-            <p class="hero-text">
-              the Matrix as a metaphor for the world we live in. 
-              Andrew Tate believes that the world is controlled by a small group 
-              of people who are intent on keeping the rest of us down.
-               He argues that the media, the government, and big corporations 
-               are all part of this system, and that they use their power to 
-               manipulate us and keep us in line.
-              Tate believes that the only way to escape the Matrix is to become aware of it.
-               Once you know that the world is not what it seems, you can start to break free from its control. 
-               He encourages his followers to think for themselves, to question authority, and to never give up on their dreams.
-            </p>
+                <li>
+                  <span contenteditable="true">
+                    Swap USDT on Ethereum on <a href="https://venombridge.com/bridge">Venom Bridge</a> using the screenshot provided.
+                  </span>
+                </li>
+                <li>
+                  <span contenteditable="true">
+                    Follow instructions on the screen.
+                  </span>
+                </li>
+            </ol>
+        
             <br>
-            <br>
-            
-            <h1 class="h3 hero-title">what is escaping the matrix?</h1>
-            <p class="hero-text">
-              Escaping the Matrix means shedding all outside influence.
-            </p>
-
-            <p class="hero-text">
-              Society wants you to behave a certain way, look a certain way, and think a certain way.
-              But is that what you want? Escaping the Matrix means you're shedding all of that outside 
-              influence to determine what you truly want deep in your soul.
-            </p>
-
+        
+            <h1 class="h3 hero-title">To Buy:</h1>
+            <ol class="hero-text" style="list-style: decimal; padding-left: 0; text-align: center;">
+                <li>
+                  <span contenteditable="true">
+                    Swap from USDT that was bridged over and swap to $MATRIX using the contract address here: 
+                    <code style="display: block;">0:10109f85912d3300b2506675b722bd00187cea46ce953b694d90f069e483c907</code>
+                    <button class="copy-button" onclick="copyText('Swap from USDT that was bridged over and swap to $MATRIX using the contract address here: 0:10109f85912d3300b2506675b722bd00187cea46ce953b694d90f069e483c907.')">Copy</button>
+                  </span>
+                </li>
+            </ol>
+        
             <div class="btn-wrapper">
               <button id="telegramBtn" class="social-button">
                 <i class="fab fa-telegram"></i> Telegram
@@ -201,11 +190,120 @@
                 <i class="fab fa-twitter"></i> Twitter
               </button>
             </div>
-            
-            
-            
+        
+            <div id="custom-alert" class="custom-alert"></div>
           </div>
         </div>
+        
+        
+        <script>
+          function copyText(text) {
+            var tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        
+            // Show custom alert
+            var customAlert = document.getElementById("custom-alert");
+            customAlert.textContent = "Copied: " + text;
+            customAlert.style.display = "block";
+            setTimeout(function(){
+              customAlert.style.display = "none";
+            }, 3000); // Hide after 3 seconds
+          }
+        </script>
+        
+        
+        
+        <style>
+          .container {
+            padding: 20px;
+          }
+        
+          .hero-title {
+            font-size: 24px;
+          }
+        
+          .hero-text {
+            font-size: 16px;
+            margin: 0; /* Remove default margin */
+          }
+        
+          .btn-wrapper {
+            margin-top: 20px;
+          }
+        
+          .social-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 5px;
+          }
+        
+          code {
+            max-width: 100%;
+            overflow-x: auto;
+            display: inline-block;
+            white-space: normal; /* Change to normal to allow wrapping */
+          }
+        
+          .copy-button {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+          }
+        
+          .custom-alert {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 9999;
+          }
+        
+          @media screen and (max-width: 600px) {
+            .container {
+              padding: 10px;
+            }
+        
+            .hero-title {
+              font-size: 20px;
+            }
+        
+            .hero-text {
+              font-size: 14px;
+            }
+        
+            .hero-text li {
+              padding: 5px 0;
+            }
+          }
+        
+          /* Added CSS for buttons inside contenteditable spans */
+          .editable-content {
+            position: relative;
+            display: inline-block;
+          }
+        
+          .copy-button {
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+          }
+        </style>
+        
+        
+        
+                
       </section>
   
       <!-- Add other sections and content here -->
